@@ -1,0 +1,23 @@
+
+yum install autoconf
+yum install autoconf
+yum install -y automake libtool gcc-c++
+yum install git
+git clone https://github.com/sarfata/pi-blaster.git
+
+./autogen.sh
+./configure
+make
+sudo make install
+systemctl status pi-blaster
+
+
+/////
+makeって何？
+→C/C++のコンパイルの自動化ツールです。
+
+autoconfって何？
+→makeファイルを自動生成するためのツールです。
+
+pi-blasterって何？
+→raspbery pi でPWMを使用する場合の機能ラッパー？
